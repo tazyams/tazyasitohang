@@ -1,42 +1,66 @@
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background-color: #ffffff;
-            color: black;
-            padding: 10px 0;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        .container {
-            background-color: #fffff8;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        footer {
-            text-align: center;
-            font-size: small;
-            margin-top: 20px;
-            color: #ffffff;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #fffff8;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9F7F3;
+    margin: 0;
+    padding: 20px;
+    color: #2C3E50; 
+}
+
+header {
+    background-color: #2C3E50; 
+    color: white; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    background-color: #FFFFFF; 
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin-top: 20px;
+    color: #2C3E50; 
+}
+
+nav a {
+    margin: 0 15px;
+    color: #3498DB; 
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #2980B9; 
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #3498DB; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980B9; 
+}
