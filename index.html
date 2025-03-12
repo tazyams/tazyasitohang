@@ -6,13 +6,9 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     <script>
-        alert("Selamat datang di website saya!");
+     <p id="pesan">Teks ini akan berubah setelah tombol diklik.</p>
 
-        function ubahTeks() {
-            document.getElementById("pesan").innerHTML = "Teks telah berubah!";
-        }
-    </script>
+    <button id="animasiBtn" onclick="ubahTeks()">Klik Saya</button>
 <header>
 <h1>Perpustakaan Tazya</h1>
 <nav>
@@ -29,6 +25,15 @@ Tujuan dari perpustakaan ini adalah untuk berbagi ilmu dan referensi yang mungki
 <p>Silakan jelajahi koleksi saya, dan semoga informasi yang tersedia dapat membantu dalam proses belajar Anda!
 </p>
 </div>
+
+     <h2>Kolom Komentar</h2>
+    <input type="text" id="inputKomentar" placeholder="Tulis komentar Anda...">
+    <button onclick="tambahKomentar()">Tambahkan Komentar</button>
+
+    <h3>Daftar Komentar:</h3>
+    <ul id="daftarKomentar"></ul>
+
+    <script src="script.js"></script>
 <footer>
     © 2025 Tazya Margaretha Sitohang
 </footer>
