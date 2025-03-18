@@ -9,6 +9,20 @@ function ubahTeks() {
     pesan.style.transition = "color 0.5s ease-in-out";
 }
 
+document.getElementById('searchBox').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const books = document.querySelectorAll('.buku');
+
+    books.forEach(book => {
+        const title = book.querySelector('h3').innerText.toLowerCase();
+        if (title.includes(query)) {
+            book.style.display = '';
+        } else {
+            book.style.display = 'none';
+        }
+    });
+});
+
 const bookList = document.getElementById('bookList');
 
 function addBook(title, author, description, imageUrl) {
