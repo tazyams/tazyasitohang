@@ -9,18 +9,20 @@ function ubahTeks() {
     pesan.style.transition = "color 0.5s ease-in-out";
 }
 
-document.getElementById('searchBox').addEventListener('input', function() {
-    const query = this.value.toLowerCase();
-    const books = document.querySelectorAll('.buku');
+const searchInput = document.querySelector('input[type="text"]');
+const bukuElements = document.querySelectorAll('.buku');
 
-    books.forEach(book => {
-        const title = book.querySelector('h3').innerText.toLowerCase();
-        if (title.includes(query)) {
-            book.style.display = '';
-        } else {
-            book.style.display = 'none';
-        }
-    });
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  bukuElements.forEach(buku => {
+    const title = buku.querySelector('h2').textContent.toLowerCase();
+    if (title.includes(searchTerm)) {
+      buku.style.display = '';
+    } else {
+      buku.style.display = 'none';
+    }
+  });
 });
 
 const bookList = document.getElementById('bookList');
