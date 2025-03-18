@@ -9,21 +9,63 @@ function ubahTeks() {
     pesan.style.transition = "color 0.5s ease-in-out";
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    tampilkanKomentar();
+});
+
 function tambahKomentar() {
-    let inputKomentar = document.getElementById("inputKomentar").value;
-    let daftarKomentar = document.getElementById("daftarKomentar");
-
-    if (inputKomentar.trim() !== "") {
-        let komentarBaru = document.createElement("li");
-        komentarBaru.textContent = inputKomentar;
-        komentarBaru.classList.add("fade-in"); // Animasi masuk
-
-        daftarKomentar.appendChild(komentarBaru);
-        document.getElementById("inputKomentar").value = ""; // Reset input
-    } else {
+    let inputKomentar = document.getElementById("inputKomentar").value.trim();
+    if (inputKomentar === "") {
         alert("Silakan tulis komentar terlebih dahulu!");
+        return;
     }
+
+    let komentarBaru = { id: Date.now(), text: inputKomentar };
+    let komentarList = JSON.parse(localStorage.getItem("komentarList")) || [];
+    komentarList.push(komentarBaru);
+    localStorage.setItem("komentarList", JSON.stringify(komentarList));
+
+    renderKomentar(komentarBaru);
+    document.getElementById("inputKomentar").value = ""; 
 }
+
+function tampilkanKomentar() {
+    let komentarList = JSON.parse(localStorage.getItem("komentarList")) || [];
+    komentarList.forEach(renderKomentar);
+}
+
+function renderKomentar(komentar) {
+    let daftarKomentar = document.getElementById("daftarKomentar");
+    let komentarItem = document.createElement("li");
+    komentarItem.classList.add("fade-in");
+    komentarItem.setAttribute("data-id", komentar.id);
+
+    let teksKomentar = document.createElement("span");
+    teksKomentar.textContent = komentar.text;
+
+    let tombolHapus = document.createElement("button");
+    tombolHapus.textContent = "Hapus";
+    tombolHapus.classList.add("hapus-btn");
+    tombolHapus.onclick = function () {
+        hapusKomentar(komentar.id, komentarItem);
+    };
+
+    komentarItem.appendChild(teksKomentar);
+    komentarItem.appendChild(tombolHapus);
+    daftarKomentar.appendChild(komentarItem);
+}
+
+function hapusKomentar(id, element) {
+    let komentarList = JSON.parse(localStorage.getItem("komentarList")) || [];
+    let komentarBaru = komentarList.filter((komentar) => komentar.id !== id);
+    localStorage.setItem("komentarList", JSON.stringify(komentarBaru));
+
+    element.classList.add("fade-out");
+    setTimeout(() => {
+        element.remove();
+    }, 500);
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let tombol = document.getElementById("animasiBtn");
