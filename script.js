@@ -16,7 +16,7 @@ searchInput.addEventListener('input', () => {
   const searchTerm = searchInput.value.toLowerCase();
 
   bukuElements.forEach(buku => {
-    const title = buku.querySelector('h2').textContent.toLowerCase();
+    const title = buku.querySelector('h3').textContent.toLowerCase();
     if (title.includes(searchTerm)) {
       buku.style.display = '';
     } else {
