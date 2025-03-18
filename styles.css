@@ -146,3 +146,12 @@ input {
     padding: 10px;
     border-radius: 5px;
 }
+
+.ebook-collection {
+    margin: 20px;
+}
+.ebook-item {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+}
