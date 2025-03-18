@@ -116,3 +116,33 @@ input {
         transform: translateX(20px);
     }
 }
+
+.koleksi-buku {
+    background-color: #f6f8fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.buku {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.buku h3 {
+    margin: 0;
+}
+
+.buku p {
+    margin: 10px 0;
+}
+
+.baca-sekarang {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
