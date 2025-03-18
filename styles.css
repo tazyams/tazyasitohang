@@ -72,6 +72,21 @@ input {
     border-radius: 5px;
 }
 
+.hapus-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.hapus-btn:hover {
+    background-color: darkred;
+}
+
 .fade-in {
     animation: fadeIn 0.5s ease-in;
 }
@@ -84,5 +99,20 @@ input {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
     }
 }
