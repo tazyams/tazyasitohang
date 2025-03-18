@@ -9,6 +9,20 @@ function ubahTeks() {
     pesan.style.transition = "color 0.5s ease-in-out";
 }
 
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+function explore() {
+    closePopup();
+}
+
+window.onload = showPopup;
+
 const searchInput = document.querySelector('input[type="text"]');
 const bukuElements = document.querySelectorAll('.buku');
 
