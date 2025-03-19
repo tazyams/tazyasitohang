@@ -13,6 +13,13 @@ header {
     text-align: center;
 }
 
+.gif-buku {
+    display: block;
+    margin: 20px auto;
+    width: 150px; /* Ubah sesuai kebutuhan */
+    height: auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Times New Roman", Times, serif;
 }
