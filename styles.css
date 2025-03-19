@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     background-color: #F9F7F3;
     margin: 0;
     padding: 20px;
@@ -11,6 +11,10 @@ header {
     color: white; 
     padding: 10px 0;
     text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
