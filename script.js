@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    alert("Selamat datang di Perpustakaan Digital Saya!");
-});
-
-function ubahTeks() {
-    let pesan = document.getElementById("pesan");
-    pesan.innerHTML = "Teks telah berubah!";
-    pesan.style.color = "blue";
-    pesan.style.transition = "color 0.5s ease-in-out";
-}
-
 function showPopup() {
     document.getElementById('popup').style.display = 'block';
 }
