@@ -9,14 +9,18 @@ body {
 header {
     background-color: #2C3E50; 
     color: white; 
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
     display: flex;
+    align-items: center;  
+    justify-content: center; 
+    position: relative; 
 }
 
 .gif-buku {
     width: 80px;
     height: auto;
+    position: absolute;
+    left: 20px; 
 }
 
 h1, h2, h3, h4, h5, h6 {
