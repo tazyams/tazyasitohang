@@ -31,6 +31,23 @@ h1 {
     margin: 0;
 }
 
+.navbar {
+    margin-top: 10px;
+}
+
+.navbar a {
+    display: inline-block;
+    background-color: white;
+    color: #2C3E50;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
 
 nav {
     background-color: #2C3E50; 
