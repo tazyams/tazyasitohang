@@ -19,9 +19,6 @@ header {
     top: 50%;
     transform: translateY(-50%);
     width: 50px; 
-    display: flex;
-    align-items: center; 
-    gap: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
