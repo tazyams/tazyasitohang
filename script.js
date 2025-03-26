@@ -97,3 +97,23 @@ document.addEventListener("DOMContentLoaded", function () {
         tombol.style.transform = "scale(1)";
     });
 });
+
+function updateCountdown() {
+    let eventDate = new Date("April 20, 2025 10:00:00").getTime();
+    let now = new Date().getTime();
+    let timeLeft = eventDate - now;
+
+    let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
+
+    if (timeLeft < 0) {
+        document.getElementById("countdown").innerHTML = "Acara Sedang Berlangsung!";
+    }
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
