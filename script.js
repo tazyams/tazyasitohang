@@ -121,17 +121,31 @@ updateCountdown();
 let events = [
     { name: "Pameran Buku Nasional", date: "2025-04-20", location: "Jakarta Convention Center" },
     { name: "Festival Literasi", date: "2025-05-15", location: "Perpustakaan Nasional" },
-    { name: "Bursa Buku Murah", date: "2025-06-10", location: "Mall Kota Medan" }
+    { name: "Bursa Buku Murah", date: "2025-03-10", location: "Mall Kota Medan" } // Event yang sudah berlalu
 ];
 
+function formatDate(dateStr) {
+    let options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateStr).toLocaleDateString("id-ID", options);
+}
+
 function loadEvents() {
-    let list = document.getElementById("eventList");
-    list.innerHTML = "";
-    
+    let upcomingList = document.getElementById("upcomingEvents");
+    let pastList = document.getElementById("pastEvents");
+    upcomingList.innerHTML = "";
+    pastList.innerHTML = "";
+
+    let today = new Date();
+
     events.forEach(event => {
-        let li = document.createElement("li");
-        li.innerHTML = `<b>${event.name}</b> - ${event.date} di ${event.location}`;
-        list.appendChild(li);
+        let eventDate = new Date(event.date);
+        let row = `<tr><td>${event.name}</td><td>${formatDate(event.date)}</td><td>${event.location}</td></tr>`;
+
+        if (eventDate >= today) {
+            upcomingList.innerHTML += row;
+        } else {
+            pastList.innerHTML += row;
+        }
     });
 }
 
