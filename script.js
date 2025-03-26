@@ -136,3 +136,12 @@ function loadEvents() {
 }
 
 loadEvents();
+
+function registerEvent() {
+    let name = document.getElementById("name").value;
+    if (name.trim() !== "") {
+        document.getElementById("confirmation").innerHTML = `Terima kasih, ${name}! Anda telah terdaftar.`;
+    } else {
+        document.getElementById("confirmation").innerHTML = "Mohon isi nama Anda.";
+    }
+}
