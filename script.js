@@ -117,3 +117,22 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+let events = [
+    { name: "Pameran Buku Nasional", date: "2025-04-20", location: "Jakarta Convention Center" },
+    { name: "Festival Literasi", date: "2025-05-15", location: "Perpustakaan Nasional" },
+    { name: "Bursa Buku Murah", date: "2025-06-10", location: "Mall Kota Medan" }
+];
+
+function loadEvents() {
+    let list = document.getElementById("eventList");
+    list.innerHTML = "";
+    
+    events.forEach(event => {
+        let li = document.createElement("li");
+        li.innerHTML = `<b>${event.name}</b> - ${event.date} di ${event.location}`;
+        list.appendChild(li);
+    });
+}
+
+loadEvents();
