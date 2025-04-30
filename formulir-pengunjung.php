@@ -38,7 +38,7 @@
             box-sizing: border-box;
         }
         input[type="submit"] {
-            background-color: #b2c4f5;
+            background-color: #83a0ee;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -48,7 +48,7 @@
             width: 100%;
         }
         input[type="submit"]:hover {
-            background-color: #b2c4f5;
+            background-color: #83a0ee;
         }
     </style>
 </head>
