@@ -20,7 +20,7 @@
             background-color: #b2c4f5;
         }
         .highlight {
-            background-color: light blue;
+            background-color: lightblue;
         }
         #result {
             text-align: center;
