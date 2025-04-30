@@ -17,10 +17,10 @@
             cursor: pointer;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #b2c4f5;
         }
         .highlight {
-            background-color: yellow;
+            background-color: blue;
         }
         #result {
             text-align: center;
