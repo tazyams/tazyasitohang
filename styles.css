@@ -250,3 +250,10 @@ input {
     background-color: blue;
     color: white;
 }
+
+.card-title {
+  font-family: "Times New Roman", serif;
+}
+.card-text {
+  font-family: "Times New Roman", serif;
+}
