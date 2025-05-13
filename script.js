@@ -159,3 +159,10 @@ function registerEvent() {
         document.getElementById("confirmation").innerHTML = "Mohon isi nama Anda.";
     }
 }
+
+window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('preloader').style.display = 'none';
+
+      var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+      myModal.show();
