@@ -150,19 +150,3 @@ function registerEvent() {
     }
 }
 
-const links = document.querySelectorAll('.nav-link');
-const tooltip = document.getElementById('tooltip');
-
-links.forEach(link => {
-  link.addEventListener('mouseenter', (e) => {
-    tooltip.textContent = link.getAttribute('data-tooltip');
-    const rect = link.getBoundingClientRect();
-    tooltip.style.left = rect.left + rect.width / 2 + 'px';
-    tooltip.style.top = rect.bottom + window.scrollY + 10 + 'px';
-    tooltip.style.display = 'block';
-  });
-
-  link.addEventListener('mouseleave', () => {
-    tooltip.style.display = 'none';
-  });
-});
