@@ -219,21 +219,31 @@ input {
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     animation: slideUp 0.8s ease-in-out;
+    width: 90%;
+    max-width: 500px;
   }
 
   .popup-content h1 {
     color: #0066cc;
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 10px;
   }
 
-  .popup-content hr {
-    width: 70px;
-    height: 5px;
-    background-color: #0066cc;
-    border: none;
-    margin: 15px auto;
+  .loading-bar {
+    width: 80%;
+    height: 6px;
+    background-color: #e0e0e0;
     border-radius: 5px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+  }
+
+  .loading-fill {
+    height: 100%;
+    background-color: #3399ff;
+    width: 0%;
+    animation: loadingAnimation 3s linear forwards;
   }
 
   .popup-content p {
@@ -249,6 +259,11 @@ input {
   @keyframes slideUp {
     from {transform: translateY(30px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
+  }
+
+  @keyframes loadingAnimation {
+    from {width: 0%;}
+    to {width: 100%;}
   }
 
 .card-title {
