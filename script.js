@@ -150,3 +150,18 @@ function registerEvent() {
     }
 }
 
+const navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(item => {
+    const tooltip = item.querySelector('.tooltip-box');
+    const message = item.getAttribute('data-tooltip');
+
+    item.addEventListener('mouseenter', () => {
+      tooltip.textContent = message;
+      tooltip.style.display = 'block';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      tooltip.style.display = 'none';
+    });
+  });
