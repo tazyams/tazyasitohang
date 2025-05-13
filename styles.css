@@ -72,6 +72,28 @@ nav a:hover {
     color: white;
 }
 
+ .tooltip-text {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .nav-item:hover .tooltip-text {
+      opacity: 1;
+    }
+
 .container {
     width: 100%; 
     max-width: 1200px; 
