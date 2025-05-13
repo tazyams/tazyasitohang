@@ -97,7 +97,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #2980B9; 
+    color: #b9dbfe; 
     text-decoration: underline;
 }
 
@@ -120,7 +120,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980B9; 
+    background-color: #b9dbfe; 
 }
 
 input {
