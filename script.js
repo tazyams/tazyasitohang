@@ -1,16 +1,6 @@
-function showPopup() {
-    document.getElementById('popup').style.display = 'block';
-}
-
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-
-function explore() {
-    closePopup();
-}
-
-window.onload = showPopup;
+setTimeout(function () {
+    document.getElementById("welcomePopup").style.display = "none";
+  }, 3000);
 
 const searchInput = document.querySelector('input[type="text"]');
 const bukuElements = document.querySelectorAll('.buku');
@@ -160,11 +150,3 @@ function registerEvent() {
     }
 }
 
-window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.getElementById('preloader').style.display = 'none';
-
-      var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-      myModal.show();
- }, 2000);
-  });
