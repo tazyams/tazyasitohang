@@ -199,57 +199,57 @@ input {
   text-decoration: none;
 }
 
-.popup {
-    display: none; 
+#welcomePopup {
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.popup-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    text-align: center;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.element {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
     animation: fadeIn 1s ease-in-out;
-}
+  }
 
-.element {
-    transition: all 0.5s ease;
-}
+  .popup-content {
+    background-color: #ffffff;
+    border: 3px solid #3399ff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-in-out;
+  }
 
-.element:hover {
-    background-color: blue;
-    color: white;
-}
+  .popup-content h1 {
+    color: #0066cc;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .popup-content hr {
+    width: 70px;
+    height: 5px;
+    background-color: #0066cc;
+    border: none;
+    margin: 15px auto;
+    border-radius: 5px;
+  }
+
+  .popup-content p {
+    color: #444;
+    font-size: 16px;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes slideUp {
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+  }
 
 .card-title {
   font-family: "Times New Roman", serif;
