@@ -166,3 +166,5 @@ window.addEventListener('load', function () {
 
       var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
       myModal.show();
+ }, 2000);
+  });
