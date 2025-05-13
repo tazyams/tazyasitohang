@@ -50,20 +50,10 @@ h1 {
 }
 
 nav {
-    background-color: #007BFF; 
+    background-color: #2C3E50; 
     padding: 15px;
     text-align: center;
 }
-
- .nav-item {
-      display: inline-block;
-      margin: 0 20px;
-      padding: 10px 15px;
-      color: white;
-      font-size: 18px;
-      position: relative;
-      cursor: pointer;
-    }
 
 nav a {
     display: inline-block;
@@ -82,20 +72,6 @@ nav a:hover {
     color: white;
 }
 
-.tooltip-box {
-  position: absolute;
-  background-color: white;
-  color: #333;
-  padding: 8px 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-size: 14px;
-  display: none;
-  white-space: nowrap;
-  z-index: 10;
-  transform: translateX(-50%);
-}
-
 .container {
     width: 100%; 
     max-width: 1200px; 
@@ -106,7 +82,6 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box; 
 }
-
 
 footer {
     text-align: center;
