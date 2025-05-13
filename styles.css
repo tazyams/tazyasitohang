@@ -65,11 +65,12 @@ nav a {
     border-radius: 5px; 
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 nav a:hover {
     background-color: #b9dbfe; 
-    color: white;
+    color: #000000;
 }
 
 .container {
