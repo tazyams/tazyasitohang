@@ -150,18 +150,19 @@ function registerEvent() {
     }
 }
 
-const navItems = document.querySelectorAll('.nav-item');
+const links = document.querySelectorAll('.nav-link');
+const tooltip = document.getElementById('tooltip');
 
-  navItems.forEach(item => {
-    const tooltip = item.querySelector('.tooltip-box');
-    const message = item.getAttribute('data-tooltip');
-
-    item.addEventListener('mouseenter', () => {
-      tooltip.textContent = message;
-      tooltip.style.display = 'block';
-    });
-
-    item.addEventListener('mouseleave', () => {
-      tooltip.style.display = 'none';
-    });
+links.forEach(link => {
+  link.addEventListener('mouseenter', (e) => {
+    tooltip.textContent = link.getAttribute('data-tooltip');
+    const rect = link.getBoundingClientRect();
+    tooltip.style.left = rect.left + rect.width / 2 + 'px';
+    tooltip.style.top = rect.bottom + window.scrollY + 10 + 'px';
+    tooltip.style.display = 'block';
   });
+
+  link.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+  });
+});
