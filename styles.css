@@ -50,10 +50,20 @@ h1 {
 }
 
 nav {
-    background-color: #2C3E50; 
+    background-color: #007BFF; 
     padding: 15px;
     text-align: center;
 }
+
+ .nav-item {
+      display: inline-block;
+      margin: 0 20px;
+      padding: 10px 15px;
+      color: white;
+      font-size: 18px;
+      position: relative;
+      cursor: pointer;
+    }
 
 nav a {
     display: inline-block;
@@ -72,26 +82,21 @@ nav a:hover {
     color: white;
 }
 
- .tooltip-text {
+.tooltip-box {
       position: absolute;
-      bottom: -40px;
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
+      margin-top: 8px;
       background-color: white;
       color: #333;
       padding: 8px 12px;
       border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       font-size: 14px;
+      display: none;
       white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-      z-index: 100;
-    }
-
-    .nav-item:hover .tooltip-text {
-      opacity: 1;
+      z-index: 10;
     }
 
 .container {
