@@ -70,7 +70,7 @@ nav a {
 
 nav a:hover {
     background-color: #b9dbfe; 
-    color: #000000;
+    color: #000 !important
 }
 
 .container {
