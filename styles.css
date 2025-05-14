@@ -38,7 +38,7 @@ h1 {
 .navbar a {
     display: inline-block;
     background-color: white;
-    color: #2C3E50;
+    color: #b9dbfe;
     padding: 8px 15px;
     margin: 5px;
     border-radius: 5px;
@@ -50,7 +50,7 @@ h1 {
 }
 
 nav {
-    background-color: #2C3E50; 
+    background-color: #b9dbfe; 
     padding: 15px;
     text-align: center;
 }
@@ -58,7 +58,7 @@ nav {
 nav a {
     display: inline-block;
     background-color: #ffffff; 
-    color: #2C3E50; 
+    color: #b9dbfe; 
     text-decoration: none;
     padding: 10px 20px; 
     margin: 0 10px; 
@@ -69,7 +69,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #b9dbfe; 
+    background-color: #2C3E50; 
     color: #000 !important
 }
 
