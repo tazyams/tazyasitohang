@@ -280,20 +280,21 @@ input {
   font-family: "Times New Roman", serif;
 }
 
-.card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-height: 300px;
 }
 
 .card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: none;
+}
+
+.row {
   width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
+  margin: 0 auto;
 }
