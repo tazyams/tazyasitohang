@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: linear-gradient(45deg, #353A5F, #9EBAF3); 
+    background-color: linear-gradient(to bottom right, #353A5F, #9EBAF3); 
     color: white; 
     padding: 10px 20px;
     display: flex;
@@ -38,7 +38,7 @@ h1 {
 .navbar a {
     display: inline-block;
     background-color: white;
-    color: #0066cc;
+    color: linear-gradient(to bottom right, #353A5F, #9EBAF3);
     padding: 8px 15px;
     margin: 5px;
     border-radius: 5px;
@@ -50,7 +50,7 @@ h1 {
 }
 
 nav {
-    background-color: #0066cc; 
+    background-color: linear-gradient(to bottom right, #353A5F, #9EBAF3); 
     padding: 15px;
     text-align: center;
 }
@@ -58,7 +58,7 @@ nav {
 nav a {
     display: inline-block;
     background-color: #ffffff; 
-    color: #0066cc; 
+    color: linear-gradient(to bottom right, #353A5F, #9EBAF3); 
     text-decoration: none;
     padding: 10px 20px; 
     margin: 0 10px; 
