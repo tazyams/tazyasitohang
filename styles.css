@@ -303,25 +303,24 @@ input {
 }
 
 .link-box-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  text-align: center;
   margin-top: 30px;
 }
 
 .link-box {
+  display: inline-block;
   background: linear-gradient(to right, #4a6ee0, #80bfff);
-  color: white;
-  padding: 12px 25px;
+  color: #2C3E50;
   text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
   font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 .link-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+  background-color: #b9dbfe;
+  color: #000;
 }
