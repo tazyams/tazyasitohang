@@ -326,3 +326,52 @@ input {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
 }
 
+form {
+    background-color: #f0f7ff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2b4f81;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #a7c7e7;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #2b6cb0;
+    outline: none;
+    background-color: #f2f9ff;
+}
+
+form button {
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #245a99;
+}
