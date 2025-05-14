@@ -1,6 +1,5 @@
 setTimeout(function () {
     document.getElementById("welcomePopup").style.display = "none";
-    document.body.style.overflow = "auto";
   }, 3000);
 
 const searchInput = document.querySelector('input[type="text"]');
