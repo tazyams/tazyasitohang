@@ -331,35 +331,35 @@ form {
   margin: 30px auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
   font-family: 'Segoe UI', sans-serif;
 }
 
 form label {
   font-weight: 600;
-  color: #003366; 
+  color: #003366;
+  margin-bottom: 4px; 
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  padding: 12px;
+  padding: 10px;
   border: 2px solid #007BFF;
   border-radius: 8px;
   font-size: 14px;
   background-color: #f9f9f9;
-  transition: border-color 0.3s ease;
+  margin-bottom: 16px; 
 }
 
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #0056b3;
+  border-color: #9EBAF3;
   background-color: #ffffff;
 }
 
 form button {
-  align-self: flex-start;
+  width: fit-content;
   background-color: #007BFF;
   color: white;
   border: none;
@@ -368,6 +368,7 @@ form button {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 8px;
 }
 
 form button:hover {
