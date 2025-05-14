@@ -16,13 +16,6 @@ header {
     position: relative; 
 }
 
-header, nav {
-  background: linear-gradient(to bottom right, #353A5F, #9EBAF3);
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
 .gif-buku {
     width: 80px;
     height: auto;
@@ -45,7 +38,7 @@ h1 {
 .navbar a {
     display: inline-block;
     background-color: white;
-    color: linear-gradient(to bottom right, #353A5F, #9EBAF3);
+    color: #353A5F;
     padding: 8px 15px;
     margin: 5px;
     border-radius: 5px;
@@ -57,15 +50,16 @@ h1 {
 }
 
 nav {
-    background-color: linear-gradient(to bottom right, #353A5F, #9EBAF3); 
+    background-color: transparent; 
     padding: 15px;
     text-align: center;
+    margin-top: -10px;
 }
 
 nav a {
     display: inline-block;
     background-color: #ffffff; 
-    color: linear-gradient(to bottom right, #353A5F, #9EBAF3); 
+    color: #353A5F; 
     text-decoration: none;
     padding: 10px 20px; 
     margin: 0 10px; 
