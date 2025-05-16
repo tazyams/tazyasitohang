@@ -374,3 +374,50 @@ form button {
 form button:hover {
   background-color: #0056b3;
 }
+
+.cookie-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2e3353;
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  max-width: 400px;
+  font-family: sans-serif;
+  display: none; /* hidden by default */
+}
+
+.cookie-text h2 {
+  margin-top: 0;
+}
+
+.cookie-text p {
+  font-size: 14px;
+  color: #cfd3ec;
+}
+
+.cookie-buttons {
+  margin-top: 15px;
+}
+
+.cookie-buttons button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cookie-buttons .accept {
+  background: linear-gradient(to right, #f7971e, #ffd200);
+  border: none;
+  color: #000;
+  font-weight: bold;
+}
