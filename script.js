@@ -149,3 +149,47 @@ function registerEvent() {
         document.getElementById("confirmation").innerHTML = "Mohon isi nama Anda.";
     }
 }
+
+function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+    document.cookie = name + "=" + value + "; expires=" + expires + "; path=/";
+  }
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      let c = cookies[i].trim();
+      if (c.indexOf(name + "=") === 0) {
+        return c.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  window.onload = function() {
+    if (!getCookie("cookiesAccepted")) {
+      document.getElementById("cookieConsent").style.display = "block";
+    }
+
+    document.getElementById("acceptCookies").onclick = function() {
+      setCookie("cookiesAccepted", "yes", 30);
+      document.getElementById("cookieConsent").style.display = "none";
+      document.getElementById("cookieSettings").style.display = "none";
+    }
+
+    document.getElementById("manageCookies").onclick = function() {
+      document.getElementById("cookieSettings").style.display = "block";
+    }
+
+    document.getElementById("saveSettings").onclick = function() {
+      let analytics = document.getElementById("analyticsCookies").checked;
+      let ads = document.getElementById("adsCookies").checked;
+
+      setCookie("analyticsCookies", analytics, 30);
+      setCookie("adsCookies", ads, 30);
+
+      setCookie("cookiesAccepted", "custom", 30);
+      document.getElementById("cookieConsent").style.display = "none";
+      document.getElementById("cookieSettings").style.display = "none";
+    }
+  }
