@@ -150,3 +150,34 @@ function registerEvent() {
     }
 }
 
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const c = cookies[i].trim();
+      if (c.startsWith(name + '=')) {
+        return c.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+  }
+
+  function acceptCookies() {
+    setCookie("cookieAccepted", "yes", 30);
+    document.getElementById("cookiePopup").style.display = "none";
+  }
+
+  function rejectCookies() {
+    setCookie("cookieAccepted", "no", 30);
+    document.getElementById("cookiePopup").style.display = "none";
+  }
+
+  window.onload = function() {
+    if (!getCookie("cookieAccepted")) {
+      document.getElementById("cookiePopup").style.display = "block";
+    }
+  }
