@@ -375,49 +375,35 @@ form button:hover {
   background-color: #0056b3;
 }
 
-.cookie-consent {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: #e6f2ff;
-  color: #003366;
-  padding: 16px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: none;
-  z-index: 1000;
-  text-align: center;
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #6FC3F7;
+    border: 1px solid #e0d6cc;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    color: #4e3b31;
 }
 
-.cookie-buttons button {
-  margin: 10px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+.cookie-banner button {
+    background-color: #9EBAF3;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4e3b31;
+    transition: 0.3s ease;
 }
 
-#acceptCookies {
-  background-color: #007bff;
-  color: white;
-}
-
-#manageCookies {
-  background-color: #cccccc;
-  color: #333;
-}
-
-.cookie-settings {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  left: 20px;
-  right: 20px;
-  background: #ffffff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+.cookie-banner button:hover {
+    background-color: #353A5F;
+    color: #fff;
 }
