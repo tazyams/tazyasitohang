@@ -150,16 +150,16 @@ function registerEvent() {
     }
 }
 
- function acceptCookies() {
-        localStorage.setItem("cookieAccepted", "true");
-        document.getElementById("cookie-banner").style.display = "none";
+ document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const button = document.getElementById("accept-cookies");
+
+    if (!localStorage.getItem("cookieAccepted")) {
+      banner.style.display = "block";
     }
 
-   document.addEventListener("DOMContentLoaded", function () {
-    if (!localStorage.getItem("cookieAccepted")) {
-        let banner = document.getElementById("cookie-banner");
-        if (banner) {
-            banner.style.display = "block";
-        }
-    }
-});
+    button.addEventListener("click", function () {
+      localStorage.setItem("cookieAccepted", "true");
+      banner.style.display = "none";
+    });
+  });
