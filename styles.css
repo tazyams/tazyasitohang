@@ -376,34 +376,39 @@ form button:hover {
 }
 
 .cookie-banner {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: #6FC3F7;
-    border: 1px solid #e0d6cc;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: none;
-    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #6FC3F7;
+    color: white;
     text-align: center;
-    color: #4e3b31;
-}
+    padding: 16px;
+    z-index: 9999;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
 
-.cookie-banner button {
-    background-color: #9EBAF3;
-    border: none;
+.cookie-banner p {
+    margin: 0 0 10px;
+  }
+
+  #accept-cookies {
     padding: 8px 16px;
-    margin-left: 15px;
-    border-radius: 8px;
+    background-color: #9EBAF3;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
-    color: #4e3b31;
-    transition: 0.3s ease;
-}
+  }
 
-.cookie-banner button:hover {
+  #accept-cookies:hover {
     background-color: #353A5F;
-    color: #fff;
-}
+  }
+
+  @media (max-width: 600px) {
+    .cookie-banner {
+      font-size: 12px;
+      padding: 12px;
+    }
+  }
