@@ -150,16 +150,3 @@ function registerEvent() {
     }
 }
 
- document.addEventListener("DOMContentLoaded", function () {
-    const banner = document.getElementById("cookie-banner");
-    const button = document.getElementById("accept-cookies");
-
-    if (!localStorage.getItem("cookieAccepted")) {
-      banner.style.display = "block";
-    }
-
-    button.addEventListener("click", function () {
-      localStorage.setItem("cookieAccepted", "true");
-      banner.style.display = "none";
-    });
-  });
