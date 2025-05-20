@@ -155,8 +155,11 @@ function registerEvent() {
         document.getElementById("cookie-banner").style.display = "none";
     }
 
-    window.onload = function () {
-        if (!localStorage.getItem("cookieAccepted")) {
-            document.getElementById("cookie-banner").style.display = "block";
+   document.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("cookieAccepted")) {
+        let banner = document.getElementById("cookie-banner");
+        if (banner) {
+            banner.style.display = "block";
         }
-    };
+    }
+});
