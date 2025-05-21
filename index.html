@@ -132,6 +132,18 @@
   </div>
 </div>
 
+<div id="cookie-settings-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: white; border-radius: 10px; padding: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 10000; max-width: 400px; width: 90%;">
+  <h3>Pengaturan Cookie</h3>
+  <form>
+    <label><input type="checkbox" checked disabled> Cookie Esensial (wajib)</label><br><br>
+    <label><input type="checkbox" id="cookie-analytics"> Cookie Analitik</label><br><br>
+    <label><input type="checkbox" id="cookie-marketing"> Cookie Pemasaran</label><br><br>
+    <button type="button" onclick="saveCookieSettings()">Simpan</button>
+    <button type="button" onclick="closeCookieSettings()">Batal</button>
+  </form>
+</div>
+
 <script>
   function setCookie(name, value, days) {
     const d = new Date();
@@ -158,8 +170,24 @@
   }
 
   function manageCookies() {
-    window.location.href = "pengaturan-cookies.html"; // GANTI ALERT DENGAN INI
-  }
+  document.getElementById("cookie-settings-modal").style.display = "block";
+}
+
+function closeCookieSettings() {
+  document.getElementById("cookie-settings-modal").style.display = "none";
+}
+
+function saveCookieSettings() {
+  const analytics = document.getElementById("cookie-analytics").checked;
+  const marketing = document.getElementById("cookie-marketing").checked;
+
+  setCookie("userConsent", "accepted", 365);
+  setCookie("analytics", analytics, 365);
+  setCookie("marketing", marketing, 365);
+
+  closeCookieSettings();
+  document.getElementById("cookie-consent").style.display = "none";
+}
 
   window.onload = function() {
     if(getCookie("userConsent") !== "accepted") {
