@@ -190,7 +190,7 @@ function saveCookieSettings() {
 }
 
   window.onload = function() {
-    if(getCookie("userConsent") !== "accepted") {
+    if(!getCookie("userConsent")) {
       document.getElementById("cookie-consent").style.display = "block";
     }
   };
