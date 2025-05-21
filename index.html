@@ -123,76 +123,49 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<div id="cookieConsent" class="cookie-consent">
-  <p>Kami menggunakan cookies untuk meningkatkan pengalaman Anda.</p>
-  <div class="cookie-buttons">
-    <button id="manageCookies">Kelola Cookies</button>
-    <button id="acceptCookies">Setujui</button>
-  </div>
-</div>
-
-<div id="cookieSettings" class="cookie-settings">
-  <div class="settings-content">
-    <h3>Pengaturan Cookies</h3>
-    <p>
-      Anda dapat mengelola jenis cookies yang ingin diaktifkan:
-    </p>
-    <label>
-      <input type="checkbox" id="analyticsCookies" checked>
-      Cookies Analitik
-    </label><br>
-    <label>
-      <input type="checkbox" id="adsCookies">
-      Cookies Iklan
-    </label><br><br>
-    <button id="saveSettings">Simpan Pengaturan</button>
+<div id="cookie-consent">
+  <p><strong>Perhatian!</strong> Situs ini menggunakan cookies untuk meningkatkan pengalaman Anda.</p>
+  <p>Dengan melanjutkan menggunakan situs ini, Anda menyetujui <a href="kebijakan-cookies.html" >Kebijakan Cookies</a> kami.</p>
+  <div id="cookie-buttons">
+    <button id="accept-btn" onclick="acceptCookies()">Setuju</button>
+    <button id="settings-btn" onclick="manageCookies()">Kelola Cookies</button>
   </div>
 </div>
 
 <script>
-    function setCookie(name, value, days) {
-    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
-    document.cookie = name + "=" + value + "; expires=" + expires + "; path=/";
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days*24*60*60*1000);
+    document.cookie = name + "=" + value + ";path=/;expires=" + d.toUTCString();
   }
 
   function getCookie(name) {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      let c = cookies[i].trim();
-      if (c.indexOf(name + "=") === 0) {
-        return c.substring(name.length + 1);
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) === 0) {
+        return c.substring(cname.length, c.length);
       }
     }
-    return null;
+    return "";
+  }
+
+  function acceptCookies() {
+    setCookie("userConsent", "accepted", 365);
+    document.getElementById("cookie-consent").style.display = "none";
+  }
+
+  function manageCookies() {
+    window.location.href = "pengaturan-cookies.html"; // GANTI ALERT DENGAN INI
   }
 
   window.onload = function() {
-    if (!getCookie("cookiesAccepted")) {
-      document.getElementById("cookieConsent").style.display = "block";
+    if(getCookie("userConsent") !== "accepted") {
+      document.getElementById("cookie-consent").style.display = "block";
     }
-
-    document.getElementById("acceptCookies").onclick = function() {
-      setCookie("cookiesAccepted", "yes", 30);
-      document.getElementById("cookieConsent").style.display = "none";
-      document.getElementById("cookieSettings").style.display = "none";
-    }
-
-    document.getElementById("manageCookies").onclick = function() {
-      document.getElementById("cookieSettings").style.display = "block";
-    }
-
-    document.getElementById("saveSettings").onclick = function() {
-      let analytics = document.getElementById("analyticsCookies").checked;
-      let ads = document.getElementById("adsCookies").checked;
-
-      setCookie("analyticsCookies", analytics, 30);
-      setCookie("adsCookies", ads, 30);
-
-      setCookie("cookiesAccepted", "custom", 30);
-      document.getElementById("cookieConsent").style.display = "none";
-      document.getElementById("cookieSettings").style.display = "none";
-    }
-  }
+  };
 </script>
             
 </body>
