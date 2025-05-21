@@ -381,7 +381,7 @@ form button:hover {
     bottom: 25px;
     right: 25px;
     max-width: 350px;
-    background: linear-gradient(to bottom right, #353A5F, #9EBAF3);
+    background-color: #9EBAF3;
     border-left: 6px solid #2a659f;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
