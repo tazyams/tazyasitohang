@@ -423,7 +423,7 @@ form button:hover {
 
 .dropdown-toggle {
   background-color: #ffffff;
-  color: #353A5F;
+  color: #3498DB;
   padding: 10px 16px;
   text-decoration: none;
   border-radius: 5px;
@@ -442,7 +442,7 @@ form button:hover {
 }
 
 .dropdown-menu a {
-  color: #353A5F;
+  color: #3498DB;
   padding: 10px 16px;
   text-decoration: none;
   display: block;
