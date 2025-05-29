@@ -195,11 +195,7 @@ function saveCookieSettings() {
 }
 
   window.onload = function() {
-      if(getCookie("userConsent")) {
       document.getElementById("cookie-consent").style.display = "block";
-      document.cookie = "userConsent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-
-    }
   };
 </script>
             
