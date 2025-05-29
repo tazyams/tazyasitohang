@@ -25,8 +25,13 @@
         <nav>
             <a href="about-me.html" title="Lihat lebih lanjut tentang saya di sini">About Me</a>
             <a href="contact-us.html" title="Hubungi saya melalui halaman ini">Contact Us</a>
-            <a href="tabel-perkalian.php">Tabel Perkalian</a>
-            <a href="formulir-pengunjung.php">Formulir Pengunjung</a>
+            <div class="dropdown">
+            <a href="tugas.php" class="dropdown-toggle" onclick="toggleDropdown(event)">Tugas PHP</a>
+            <ul class="dropdown-menu">
+              <li><a href="tabel-perkalian.php">Tabel Perkalian</a></li>
+              <li><a href="formulir-pengunjung.php">Formulir Pengunjung</a></li>
+           </ul>
+           </div>
         </nav>
     </header>
     <div class="container">
