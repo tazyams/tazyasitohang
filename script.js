@@ -1,7 +1,7 @@
 setTimeout(function () {
     document.getElementById("welcomePopup").style.display = "none";
+    document.dispatchEvent(new Event("popupSelesai"));
 }, 3000);
-    document.addEventListener("popupFinished", function () {
 
 const searchInput = document.querySelector('input[type="text"]');
 const bukuElements = document.querySelectorAll('.buku');
