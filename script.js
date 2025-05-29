@@ -1,6 +1,5 @@
 setTimeout(function () {
     document.getElementById("welcomePopup").style.display = "none";
-    document.dispatchEvent(new Event("popupFinished"));
 }, 3000);
     document.addEventListener("popupFinished", function () {
 
