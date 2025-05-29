@@ -194,9 +194,9 @@ function saveCookieSettings() {
   document.getElementById("cookie-consent").style.display = "none";
 }
 
-  window.onload = function() {
-      document.getElementById("cookie-consent").style.display = "block";
-  };
+  document.addEventListener("popupSelesai", function () {
+  document.getElementById("cookie-consent").style.display = "block";
+});
 </script>
             
 </body>
