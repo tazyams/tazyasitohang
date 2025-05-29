@@ -150,17 +150,3 @@ function registerEvent() {
     }
 }
 
-  function toggleDropdown(event) {
-    event.preventDefault(); 
-    const dropdown = event.target.closest('.dropdown');
-    dropdown.classList.toggle('open');
-  }
-
-  window.addEventListener('click', function(e) {
-    document.querySelectorAll('.dropdown').forEach(function(drop) {
-      if (!drop.contains(e.target)) {
-        drop.classList.remove('open');
-      }
-    });
-  });
-
