@@ -89,7 +89,8 @@ footer {
     text-align: center;
     font-size: small;
     margin-top: 20px;
-    color: #2C3E50; 
+    background: linear-gradient(to bottom right, #353A5F, #9EBAF3);
+    color: white; 
 }
 
 nav a {
